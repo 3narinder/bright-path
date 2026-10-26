@@ -1,26 +1,128 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --breakpoint-tablet: 810px;
+  --breakpoint-desktop: 1200px;
+
+  /* Fonts */
+  --font-bricolage: var(--font-bricolage);
+  --font-instrument: var(--font-instrument);
+
+  /* Base colors */
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-transparent: transparent;
+
+  /* Black */
+  --color-black-56: #0000008f;
+
+  /* Brand */
+  --color-burnt-orange: #e8722c;
+  --color-deep-orange: #cf610c;
+  --color-dark-pine-green: #1b3428;
+  --color-deep-forest-green: #14261d;
+
+  /* Deep forest green opacity */
+  --color-deep-forest-green-10: #14261d1a;
+  --color-deep-forest-green-20: #14261d33;
+  --color-deep-forest-green-70: #14261db3;
+
+  /* Supporting colors */
+  --color-dusty-blue: #5499b2;
+  --color-dusty-rose: #be8fa9;
+  --color-ivory-cream: #f4f0e5;
+  --color-muted-sand: #ba9275;
+  --color-olive-sage: #a0af64;
+  --color-peach-cream: #f9d8c0;
+  --color-powder-blue: #c9e0f2;
+  --color-sage-green: #497e64;
+  --color-slate-green: #45564b;
+  --color-soft-blush-pink: #f6d7e8;
+  --color-soft-lime-green: #d6e59a;
+  --color-terracotta-brown: #b26e45;
+  --color-warm-beige: #eae4d3;
+
+  /* White opacity */
+  --color-white-10: #ffffff1a;
+
+  /* Ivory cream opacity */
+  --color-ivory-cream-20: #f4f0e533;
+  --color-ivory-cream-60: #f4f0e599;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Headings */
+@utility heading-1 {
+  @apply font-bricolage font-bold text-deep-forest-green text-[103px] leading-[1em] tracking-[-0.06em];
+}
+
+@utility heading-2 {
+  @apply font-bricolage font-semibold text-deep-forest-green text-[82px] leading-[1.1em] tracking-[-0.08em];
+}
+
+@utility heading-3 {
+  @apply font-bricolage font-medium text-deep-forest-green text-[46px] leading-[1.2em] tracking-[-0.08em];
+}
+
+@utility heading-3sm {
+  @apply font-bricolage font-medium text-deep-forest-green text-4xl leading-[1.2em] tracking-[-0.08em];
+}
+
+@utility heading-4 {
+  @apply font-bricolage font-medium text-deep-forest-green text-3xl leading-[1.2em] tracking-[-0.04em];
+}
+
+@utility heading-5 {
+  @apply font-bricolage font-medium text-deep-forest-green text-2xl leading-[1.2em] tracking-[-0.04em];
+}
+
+@utility heading-6 {
+  @apply font-bricolage font-medium text-deep-forest-green text-xl leading-[1.2em] tracking-[-0.06em];
+}
+
+@utility heading-404 {
+  @apply font-bricolage font-extrabold text-deep-forest-green text-[404px] leading-[0.8em] tracking-tighter;
+}
+
+@utility heading-lg {
+  @apply font-bricolage font-semibold text-deep-forest-green text-[62px] leading-[1em] tracking-[-0.08em];
+}
+
+@utility heading-xl {
+  @apply font-bricolage font-semibold text-deep-forest-green text-[96px] leading-[1.1em] tracking-[-0.08em];
+}
+
+@utility heading-md {
+  @apply font-bricolage font-bold text-deep-forest-green text-[46px] leading-[1.1em] tracking-[-0.04em];
+}
+
+@utility heading-sm {
+  @apply font-bricolage font-medium text-deep-forest-green text-[44px] leading-[1.1em] tracking-[-0.08em];
+}
+
+@utility heading-xs {
+  @apply font-bricolage font-medium text-deep-forest-green text-4xl leading-[1.1em] tracking-[-0.04em];
+}
+
+/* Body text */
+@utility body {
+  @apply font-instrument font-normal text-base leading-[1.4em] text-slate-green;
+}
+
+@utility text-cms {
+  @apply font-instrument font-normal text-base leading-[1.4em] text-slate-green;
+}
+
+@utility text-italic {
+  @apply font-instrument italic text-base leading-[1.4em] text-slate-green;
+}
+
+@utility text-md {
+  @apply font-instrument font-medium text-base leading-[1.4em] text-slate-green;
 }
