@@ -4,3 +4,6 @@ export const icons = {
   circleCheck: "/icons/circle-check.svg",
   errorCross: "/icons/error.svg",
 };
+
+//* Logos
+export const navImages = {};

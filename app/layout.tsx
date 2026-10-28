@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, Instrument_Sans } from "next/font/google";
 import "./globals.css";
+import NavBar from "@/components/layout/NavBar";
 
 const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -52,7 +53,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${bricolage.variable} ${instrument.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <NavBar />
+        <main>{children}</main>
+      </body>
     </html>
   );
 }
