@@ -124,5 +124,5 @@ body {
 }
 
 @utility text-md {
-  @apply font-instrument font-medium text-base leading-[1.4em] text-slate-green;
+  @apply font-instrument font-medium text-base leading-[1.4em];
 }
